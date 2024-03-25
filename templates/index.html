@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h1>This is {{ first_name }} home page</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla reprehenderit, quas ducimus minima accusantium pariatur consequatur deserunt reiciendis nam doloribus nisi optio. Placeat at, nulla aperiam accusantium sed excepturi eos.</p>
 
-    <p>{{ stuff | title }}</p>
+    <p>{{ stuff | safe }}</p>
 
     <h2>Favorite Pizza</h2>
     <p>{{ fav_pizza }}</p>
@@ -21,6 +16,4 @@
 
     {{ fav_pizza.2 }}
 
-
-</body>
-</html>
+{% endblock %}
